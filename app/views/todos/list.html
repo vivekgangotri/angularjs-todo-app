@@ -1,0 +1,19 @@
+<!-- scope: TodoListController -->
+
+<div ng-controller="TodoListController as todoListCtrl">
+	<table border="1" width="100%">
+		<thead>
+			<tr>
+				<th>Todo</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="todo in todoListCtrl.todos">
+    			<td ng-bind="todo.title"></td>
+    			<td ng-bind="todo.completed"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- /scope: TodoListController -->

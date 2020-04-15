@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+</head>
+<body>
+<div ng-app="todoApp">
+  <div ng-controller="MainController as MainCtrl">
+  	{{ appName }}
+    <p class="username">Welcome, {{ MainCtrl.user.details.username }}</p>
+    <p class="id">User ID: {{ MainCtrl.user.details.id }}</p>
+    <hr>
+    <a ui-sref="todos-list" ui-sref-active="active">Todos List</a>
+    <hr>
+
+    <ui-view></ui-view>
+  </div>
+</div>
+
+<script type="text/javascript" src="./node_modules/angular/angular.min.js"></script>
+<script type="text/javascript" src="./node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+<script type="text/javascript" src="./assets/js/application.js"></script>
+<script type="text/javascript" src="./assets/js/todo.js"></script>
+</body>
+</html>
